@@ -8,18 +8,13 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface StudentMapper {
 
-    /**
-     * 分页查询所有学生
-     * @param page
-     * @return List<Student>
-     */
-    @Select("select * from student")
+    @Select("select * from sys_student")
     IPage<Student> findAll(Page page);
 
-    @Select("select * from student where studentId = #{studentId}")
+    @Select("select * from sys_student where studentId = #{studentId}")
     Student findById(Integer studentId);
 
-    @Delete("delete from student where studentId = #{studentId}")
+    @Delete("delete from sys_student where studentId = #{studentId}")
     int deleteById(Integer studentId);
 
     /**
@@ -27,7 +22,7 @@ public interface StudentMapper {
      * @param student 传递一个对象
      * @return 受影响的记录条数
      */
-    @Update("update student set studentName = #{studentName},grade = #{grade},major = #{major},clazz = #{clazz}," +
+    @Update("update sys_student set studentName = #{studentName},grade = #{grade},major = #{major},clazz = #{clazz}," +
             "institute = #{institute},tel = #{tel},email = #{email},pwd = #{pwd},cardId = #{cardId},sex = #{sex},role = #{role} " +
             "where studentId = #{studentId}")
     int update(Student student);
@@ -37,12 +32,12 @@ public interface StudentMapper {
      * @param student
      * @return 受影响的记录条数
      */
-    @Update("update student set pwd = #{pwd} where studentId = #{studentId}")
+    @Update("update sys_student set pwd = #{pwd} where studentId = #{studentId}")
     int updatePwd(Student student);
 
 
     @Options(useGeneratedKeys = true,keyProperty = "studentId")
-    @Insert("insert into student(studentName,grade,major,clazz,institute,tel,email,pwd,cardId,sex,role) values " +
+    @Insert("insert into sys_student(studentName,grade,major,clazz,institute,tel,email,pwd,cardId,sex,role) values " +
             "(#{studentName},#{grade},#{major},#{clazz},#{institute},#{tel},#{email},#{pwd},#{cardId},#{sex},#{role})")
     int add(Student student);
 }
