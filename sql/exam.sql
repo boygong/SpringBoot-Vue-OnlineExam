@@ -282,8 +282,8 @@ VALUES (35, '贝塔', '开坦克', '2019-09-05');
 # ----------------------------
 # Table structure for sys_multi_question
 # ----------------------------
-DROP TABLE IF EXISTS `multi_question`;
-CREATE TABLE `multi_question`
+DROP TABLE IF EXISTS `sys_multi_question`;
+CREATE TABLE `sys_multi_question`
 (
     `questionId`  int(9)       NOT NULL AUTO_INCREMENT COMMENT '试题编号',
     `subject`     varchar(20)  NULL DEFAULT NULL COMMENT '考试科目',
@@ -306,123 +306,123 @@ CREATE TABLE `multi_question`
 # ----------------------------
 # Records of multi_question
 # ----------------------------
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10000, '计算机网络', 'DNS 服务器和DHCP服务器的作用是（）', '将IP地址翻译为计算机名，为客户机分配IP地址',
         '将IP地址翻译为计算机名、解析计算机的MAC地址', '将计算机名翻译为IP地址、为客户机分配IP地址',
         '将计算机名翻译为IP地址、解析计算机的MAC地址', 'C', NULL, 2, '应用层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10001, '计算机网络', 'HTTP协议通常使用什么协议进行传输（）', 'ARP', 'DHCP', 'UDP', 'TCP', 'D', NULL, 2, '应用层',
         '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10003, '计算机网络', '查看DNS缓存记录的命令（）', 'ipconfig/displaydns', 'nslookup', 'ipconfig/release',
         'ipconfig/flushdns', 'A', NULL, 2, '应用层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10004, '计算机网络', 'DHCP(        )报文的目的IP地址为255.255.255.255', 'DhcpDisover', 'DhcpOffer', 'DhcpAck',
         'DhcpNack', 'A', NULL, 2, '应用层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10005, '计算机网络', '下列地址中，（  ）不是DHCP服务器分配的IP地址', '196.254.109.100', '169.254.12.42',
         '69.254.48.45', '96.254.54.15', 'B', NULL, 2, '应用层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10006, '计算机网络', 'DHCP通常可以为客户端自动配置哪些网络参数（）', 'IP，掩码，网关，DNS', 'IP，掩码，域名，SMTP',
         '网关，掩码，浏览器，FTP', 'IP，网关，DNS，服务器', 'A', NULL, 2, '应用层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10007, '计算机网络', 'DNS服务器在名称解析过程中正确的查询顺序为（）',
         '本地缓存记录→区域记录→转发域名服务器→根域名服务器', '区域记录→本地缓存记录→转发域名服务器→根域名服务器',
         '本地缓存记录→区域记录→根域名服务器→转发域名服务器', '区域记录→本地缓存记录→根域名服务器→转发域名服务器', 'A',
         NULL, 2, '应用层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10008, '计算机网络', '在TCP/IP协议中，序号小于（  ）的端口称为熟知端口(well-known port)。', '1024', '64', '256',
         '128', 'A', NULL, 2, '传输层', '1');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10009, '计算机网络', '在Internet上用TCP/IP播放视频，想用传输层的最快协议，以减少时延，要使用（ ）',
         'UDP协议的低开销特性', 'UDP协议的高开销特性', 'TCP协议的低开销特性', 'TCP协议的高开销特性', 'A', NULL, 2,
         '传输层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10010, '计算机网络', '在TCP协议中采用（ ）来区分不同的应用进程', '端口号', 'IP地址', '协议类型', 'MAC地址', 'A',
         NULL, 2, '传输层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10011, '计算机网络', '可靠的传输协议中的“可靠”指的是（ ）', '使用面向连接的会话', '使用“尽力而为”的传输',
         '使用滑动窗口来维持可靠性', '使用确认重传机制来确保传输的数据不丢失', 'D', NULL, 2, '传输层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10012, '计算机网络', '假设拥塞窗口为50KB，接收窗口为80KB，TCP能够发送的最大字节数为（ ）', '50KB', '80KB', '130KB',
         '30KB', 'A', NULL, 2, '传输层', '4');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10013, '计算机网络',
         '主机A向主机B发送一个（SYN=1，seq=2000）的TCP报文，期望与主机B建立连接，若主机B接受连接请求，则主机B发送的正确有TCP报文可能是（ ）',
         '（SYN=0,ACK=0,seq=2001,ack=2001）', '（SYN=1,ACK=1,seq=2000,ack=2000）', '•	C.（SYN=1,ACK=1,seq=2001,ack=2001）',
         '（SYN=0,ACK=1,seq=2000,ack=2000）', 'C', NULL, 2, '传输层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10014, '计算机网络',
         '主机A向主机B连续发送了两个TCP报文段，其序号分别为70和100。试问： （1）第一个报文段携带了（）个字节的数据？', ' 70',
         '30', '100', '170', 'B', NULL, 2, '传输层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10015, '计算机网络', 'PCM脉码调制的过程（ ）', '采样、量化、编码', '量化、编码、采样', '编码、量化、采样',
         '采样、编码、量化', 'A', NULL, 2, '物理层', '4');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10016, '计算机网络', '若某采用4相位调制的通信链路的数据传输速率为2400bps，则该链路的波特率为（）', '600Baud',
         '1200Baud', '4800Baud', '9600Baud', 'B', NULL, 2, '物理层', '1');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10017, '计算机网络', '以下关于数据传输速率的描述中，错误的是( )',
         '数据传输速率表示每秒钟传输构成数据代码的二进制比特数', '对于二进制数据，数据传输速率为S=1/T (bps)',
         '常用的数据传输速率单位有: 1Mbps=1.024×106bps', '数据传输速率是描述数据传输系统性能的重要技术指标之一', 'C',
         NULL, 2, '物理层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10018, '计算机网络', '以下关于时分多路复用概念的描述中，错误的是.(  ).',
         '时分多路复用将线路使用的时间分成多个时间片', '时分多路复用分为同步时分多路复用与统计时分多路复用',
         '时分多路复用使用“帧”与数据链路层“帧”的概念、作用是不同的', '统计时分多路复用将时间片预先分配给各个信道', 'D',
         NULL, 2, '物理层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10019, '计算机网络', '1000BASE-T标准支持的传输介质是（）', '双绞线', '同轴电缆', '光纤', '无线电', 'A', NULL, 2,
         '物理层', '1');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10020, '计算机网络', '一个以太网交换机，读取整个数据帧，对数据帧进行差错校验后再转发出去，这种交换方式称为 （）',
         '直通交换', '无碎片交换', '无差错交换', '存储转发交换', 'D', NULL, 2, '数据链路层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10021, '计算机网络', '关于VLAN，下面的描述中正确的是（）', '一个新的交换机没有配置VLAN',
         '通过配置VLAN减少了冲突域的数量', '一个VLAN不能跨越多个交换机', '各个VLAN属于不同的广播域', 'D', NULL, 2,
         '数据链路层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10022, '计算机网络', '以太网协议中使用物理地址作用是什么？', '.用于不同子网中的主机进行通信',
         '作为第二层设备的唯一标识', '用于区别第二层第三层的协议数据单元', '保存主机可检测未知的远程设备', 'B', NULL, 2,
         '数据链路层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10023, '计算机网络',
         '以太网采用的CSMA/CD协议，当冲突发生时要通过二进制指数后退算法计算后退延时， 关于这个算法，以下论述中错误的是 （）',
         '冲突次数越多，后退的时间越短', '平均后退次数的多少与负载大小有关', '后退时延的平均值与负载大小有关',
         '重发次数达到一定极限后放弃发送', 'A', NULL, 2, '数据链路层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10024, '计算机网络', '以下关于交换机获取与其端口连接设备的MAC地址的叙述中，正确的是（）',
         '交换机从路由表中提取设备的MAC地址', '交换机检查端口流入分组的源地址', '交换机之间互相交换地址表',
         '网络管理员手工输入设备的MAC地址', 'B', NULL, 2, '数据链路层', '2');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10025, '计算机网络', '如果G (x）为11010010，以下4个CRC校验比特序列中只有哪个可能是正确的 ？', '1101011001',
         '101011011', '11011011', '1011001', 'B', NULL, 2, '数据链路层', '1');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10026, '计算机网络', '以下关于Ethernet物理地址的描述中，错误的是', 'Ethernet物理地址又叫做MAC地址',
         '48位的Ethernet物理地址允许分配的地址数达到247个', '网卡的物理地址写入主机的EPROM中',
         '每一块网卡的物理地址在全世界是唯一的', 'C', NULL, 2, '数据链路层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10027, '计算机网络', '下列帧类型中，不属于HDLC帧类型的是（）', '信息帧', '确认帧', '监控帧', '无编号帧', 'B', NULL,
         2, '数据链路层', '1');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10028, '计算机网络', '通过交换机连接的一组站点，关于它们的广播域和冲突域说法正确的是（）',
         '组成一个冲突域，但不是一个广播域', '组成一个广播域，但不是一个冲突域', '组成一个冲突域，也是一个广播域',
         '既不一个冲突域，也不是一个广播域', 'B', NULL, 2, '数据链路层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10029, '计算机网络', '数据链路层的数据单位是（）', '帧', '字节', '比特', '分组', 'A', NULL, 2, '数据链路层', '1');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10030, '计算机网络', 'LAN参考模型可分为物理层、（ ）', 'MAC，LLC等三层', 'LLC，MHS等三层', 'MAC，FTAM等三层',
         'LLC，VT等三层', 'A', NULL, 2, '数据链路层', '3');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10031, '测试', '测试', 'A', 'B', 'C', 'D', 'B', '解析', 2, '测试', '4');
-INSERT INTO `multi_question`
+INSERT INTO `sys_multi_question`
 VALUES (10032, '计算机网络', 'DNS 服务器和DHCP服务器的作用是（）', 'A', 'B', 'C', 'D', 'B', '哦解析', 2, '网络层', '2');
 
 # ----------------------------
 # Table structure for sys_paper
 # ----------------------------
-DROP TABLE IF EXISTS `paper_manage`;
-CREATE TABLE `paper_manage`
+DROP TABLE IF EXISTS `sys_paper_manage`;
+CREATE TABLE `sys_paper_manage`
 (
     `paperId`      int(9) NULL DEFAULT NULL COMMENT '试卷编号',
     `questionType` int(1) NULL DEFAULT NULL COMMENT '题目类型',
@@ -434,85 +434,85 @@ CREATE TABLE `paper_manage`
 # ----------------------------
 # Records of sys_paper
 # ----------------------------
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10013);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10005);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10001);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10004);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10000);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10016);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10032);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10025);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10030);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10017);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10027);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10023);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10014);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10009);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10008);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10011);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10010);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10021);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10022);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 1, 10026);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10017);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10012);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10004);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10005);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10003);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10008);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10020);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10013);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10006);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 2, 10015);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10002);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10009);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10003);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10005);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10004);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10012);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10011);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10006);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10008);
-INSERT INTO `paper_manage`
+INSERT INTO `sys_paper_manage`
 VALUES (1001, 3, 10001);
 
 # ----------------------------
