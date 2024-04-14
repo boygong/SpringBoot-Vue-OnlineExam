@@ -1,0 +1,51 @@
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    
+    <property name="APP_NAME" value="test-online"/>
+    <property name="LOG_PATH" value="${user.home}/${APP_NAME}/logs"/>
+    <property name="LOG_FILE" value="${LOG_PATH}/test-online.log"/>
+    
+    <appender name="APPLICATION"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}</file>
+        
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [ %thread ] - [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+        </layout>
+    </appender>
+    
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%green(%d{yyyy-MM-dd HH:mm:ss.SSS}) [%magenta(%thread)] %highlight(%-5level) %yellow(%logger{36}): %msg%n</pattern>
+        </layout>
+    </appender>
+    
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="APPLICATION"/>
+    </root>
+</configuration>
+<!--
+    There are three attributes in the configuration:
+    scan: When this attribute is set to true, the configuration file will be reloaded if changes occur, with a default value of true.
+    scanPeriod: Sets the interval for monitoring whether the configuration file has been modified. If no time unit is specified, the default unit is milliseconds and this attribute takes effect when scan is true. The default interval is 1 minute.
+    debug: When this attribute is set to true, internal logback log information will be printed for real-time monitoring of logback operation status. The default value is false.
+-->
+
+<!--
+    Log output format:
+        %d represents date and time, %green for green color
+        %thread represents thread name, %magenta for magenta color
+        %-5level: level displayed with 5 character width from left, %highlight for highlight color
+        %logger{36} represents logger name up to 36 characters long, otherwise divided by dots. %yellow for yellow color.
+        %msg: log message
+        %n is a line break symbol.
+-->

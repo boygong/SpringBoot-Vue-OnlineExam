@@ -1,0 +1,41 @@
+package indi.gong.xu.system.serviceimpl;
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import indi.gong.xu.model.entity.Message;
+import indi.gong.xu.system.mapper.MessageMapper;
+import indi.gong.xu.system.service.MessageService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageServiceImpl implements MessageService {
+
+    @Autowired
+    private MessageMapper messageMapper;
+
+    @Override
+    public IPage<Message> findAll(Page page) {
+        return messageMapper.findAll(page);
+    }
+
+    @Override
+    public Message findById(Integer id) {
+        return messageMapper.findById(id);
+    }
+
+    @Override
+    public int delete(Integer id) {
+        return messageMapper.delete(id);
+    }
+
+    @Override
+    public int update(Message message) {
+        return messageMapper.update(message);
+    }
+
+    @Override
+    public int add(Message message) {
+        return messageMapper.add(message);
+    }
+}
